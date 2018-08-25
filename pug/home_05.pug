@@ -1,0 +1,23 @@
+extend includes/layout-header-transparent.pug
+
+block featured-post-slider
+  // Begin featured post slider
+  .minwp-featured-post-slider
+    .js-minwp-multiple-items.minwp-slider
+      include includes/article-overlay.pug
+      include includes/article-overlay.pug
+      include includes/article-overlay.pug
+      include includes/article-overlay.pug
+      include includes/article-overlay.pug
+  // End featured post slider
+
+block site-main
+  .minwp-post-list
+    include includes/article-thumbnail-left.pug
+    include includes/article-thumbnail-left.pug
+    include includes/featured-post.pug
+    include includes/article-thumbnail-left.pug
+    include includes/article-thumbnail-left.pug
+  // Begin Pagination
+  include includes/post-list-pagination-number.pug
+  // End Pagination

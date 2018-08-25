@@ -1,0 +1,41 @@
+header#masthead.site-header
+  nav.navbar.navbar-default
+    .container
+      .navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+      #myNavbar.collapse.navbar-collapse
+        // Menu / Navigation
+        ul.nav.navbar-nav
+          li.active
+            a(href='01_home.html') Home
+          li.dropdown
+            a.dropdown-toggle(data-toggle='dropdown', href='02_home.html')
+              | Home 2
+              span.caret
+            //
+              <ul class="dropdown-menu">
+              <li><a href="#">Page 1-1</a></li>
+              <li><a href="#">Page 1-2</a></li>
+              <li><a href="#">Page 1-3</a></li>
+              </ul>
+          li
+            a(href='03_home.html') Home 3
+          li
+            a(href='04_home.html') Home 4
+          li
+            a(href='05_home.html') Home 5
+          li
+            a(href='06_Standart_Post.html') Single Post
+        // Search
+        .navbar-right
+          i.fa.fa-search(aria-hidden='true')
+  // Logo
+  .minwp-logo
+    .container
+      h1.site-title
+        a(href='#', title='Sophi Dainty - Online Fashion Clothing Shop WordPress')
+          img.img-logo(src='images/logo.png', alt='Sophi Dainty')
+      p.site-description Just another WordPress site

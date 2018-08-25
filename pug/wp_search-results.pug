@@ -1,0 +1,14 @@
+extend includes/layout.pug
+
+block site-main
+	header.page-header
+		h1.page-title Search Results for: blabla ....
+	.minwp-post-list
+		include includes/post-formats/standard.pug
+		include includes/post-formats/standard.pug
+		include includes/post-formats/standard.pug
+	// Begin Pagination
+	include includes/post-list-pagination-number.pug
+	// End Pagination
+
+

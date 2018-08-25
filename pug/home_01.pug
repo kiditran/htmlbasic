@@ -1,0 +1,95 @@
+extend includes/layout.pug
+
+block featured-post-slider
+  // Begin featured post slider
+  .minwp-featured-post-slider
+    .js-minwp-multiple-items.minwp-slider
+      include includes/article-overlay.pug
+      include includes/article-overlay.pug
+      include includes/article-overlay.pug
+      include includes/article-overlay.pug
+      include includes/article-overlay.pug
+  // End featured post slider
+
+block featured-post-grid
+  // Begin featured post grid
+  .minwp-featured-post-grid
+    .container
+      .row
+        .col-md-6
+          article.post.type-post
+            header.entry-header
+              .entry-media
+                a(href='#')
+                  img.entry-img.img-responsive(src='images/dummy-photo.jpg', alt='')
+              .entry-meta
+                span.entry-time
+                  time July 7, 2017
+              h2.entry-title
+                a.entry-title-link(href='#') Small Talk Confidence
+            .entry-content
+              p
+                | Namira is a very slick and clean e-commerce template with endless possibilities. Creating an awesome clothes store with this Theme is easy than you can imagine. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        .col-md-3
+          article.post.type-post
+            header.entry-header
+              .entry-media
+                a(href='#')
+                  img.entry-img.img-responsive(src='images/dummy-photo.jpg', alt='')
+              .entry-meta
+                span.entry-time
+                  time July 7, 2017
+              h2.entry-title
+                a.entry-title-link(href='#') Small Talk Confidence
+        .col-md-3
+          article.post.type-post
+            header.entry-header
+              .entry-media
+                a(href='#')
+                  img.entry-img.img-responsive(src='images/dummy-photo.jpg', alt='')
+              .entry-meta
+                span.entry-time
+                  time July 7, 2017
+              h2.entry-title
+                a.entry-title-link(href='#') Small Talk Confidence
+        .col-md-3
+          article.post.type-post
+            header.entry-header
+              .entry-media
+                a(href='#')
+                  img.entry-img.img-responsive(src='images/dummy-photo.jpg', alt='')
+              .entry-meta
+                span.entry-time
+                  time July 7, 2017
+              h2.entry-title
+                a.entry-title-link(href='#') Small Talk Confidence
+        .col-md-3
+          article.post.type-post
+            header.entry-header
+              .entry-media
+                a(href='#')
+                  img.entry-img.img-responsive(src='images/dummy-photo.jpg', alt='')
+              .entry-meta
+                span.entry-time
+                  time July 7, 2017
+              h2.entry-title
+                a.entry-title-link(href='#') Small Talk Confidence
+  // End featured post grid
+
+block site-main
+  // Begin featured-post
+  include includes/featured-post.pug
+  // End featured-post
+  .minwp-post-grid
+    .row
+      .col-md-6
+        include includes/post-formats/standard.pug
+      .col-md-6
+        include includes/post-formats/standard.pug
+      .col-md-6
+        include includes/post-formats/standard.pug
+      .col-md-6
+        include includes/post-formats/standard.pug
+  // Begin Pagination
+  include includes/post-list-pagination-text.pug
+  // End Pagination

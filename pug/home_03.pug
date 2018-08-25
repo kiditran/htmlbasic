@@ -1,0 +1,36 @@
+extend includes/layout-no-sidebar.pug
+
+block featured-post-grid
+  // Begin featured post grid
+  .minwp-featured-post-grid.style-2
+    .container
+      .row
+        .col-md-8
+          include includes/article-overlay.pug
+        .col-md-4
+          include includes/article-overlay.pug
+        .col-md-4
+          include includes/article-overlay.pug
+  // End featured post grid
+
+block site-main
+  // Begin featured-post
+  include includes/featured-post.pug
+  // End featured-post
+  .minwp-post-grid
+    .row
+      .col-md-4
+        include includes/post-formats/standard.pug
+      .col-md-4
+        include includes/post-formats/standard.pug
+      .col-md-4
+        include includes/post-formats/standard.pug
+      .col-md-4
+        include includes/post-formats/standard.pug
+      .col-md-4
+        include includes/post-formats/standard.pug
+      .col-md-4
+        include includes/post-formats/standard.pug
+  // Begin Pagination
+  include includes/post-list-pagination-number.pug
+  // End Pagination

@@ -1,0 +1,76 @@
+extend includes/layout.pug
+
+block site-main
+	// Begin Breadcrumbs
+	.breadcrumbs-list
+		ol#breadcrumb.breadcrumb
+			li.item-home
+				a(href='#', title='Home') Home
+			li.item-blog
+				a(href='#', title='Blog') Blog
+	// End Breadcrumbs
+
+	// Begin single post
+	article.post.type-post
+		header.entry-header
+			.entry-meta
+				span.entry-time
+					time July 7, 2017
+			h1.entry-title
+				| Small Talk Confidence
+		.entry-media
+			a(href='blog-single.html')
+				img.entry-img(src='images/dummy-photo.jpg', alt='')
+		.entry-content
+			p
+				| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi non rerum sed labore vel maxime repellat, libero blanditiis eius doloribus aliquam minus enim hic architecto aut. Hic quidem ipsam fuga sequi itaque ullam mollitia, maiores tempore ab minus nam, dolor.
+			p
+				| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi non rerum sed labore vel maxime repellat, libero blanditiis eius doloribus aliquam minus enim hic architecto aut. Hic quidem ipsam fuga sequi itaque ullam mollitia, maiores tempore ab minus nam, dolor.
+			p
+				| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi non rerum sed labore vel maxime repellat, libero blanditiis eius doloribus aliquam minus enim hic architecto aut. Hic quidem ipsam fuga sequi itaque ullam mollitia, maiores tempore ab minus nam, dolor.
+			blockquote
+				p
+					| “Incredible change happens in your life when you decide to take control of what you do have power over instead of craving control over what you don't.”
+				cite - Steve Maraboli
+			p
+				| Nulla rhoncus orci varius purus lobortis euismod. Fusce tincidunt dictum est et rhoncus. Vivamus hendrerit congue nisi, et nisl tincida vestibulum elit tincidunt eu. Vivamus ac pharetra orci, in feugiat massa. Proin congue mauris pretium, ultricies tortor in, aliquam urna. Vivamus mi tortor, finibus a interdum ac, ultricies in elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere hendrerit ex eu scelerisque.
+		footer.entry-footer
+			.entry-meta
+				span.social-links
+					| Share:
+					a(href='#')
+						i.fa.fa-facebook
+					a(href='#')
+						i.fa.fa-twitter
+					a(href='#')
+						i.fa.fa-pinterest-p
+				span.comments-link
+					a(href='#') 19 comments
+				span.cat-links
+					| Categories:
+					a(href='#') Fashion
+					| ,
+					a(href='#') Fashion
+				span.edit-link
+					a.post-edit-link(href='#') Edit
+	// End single post
+
+	// Begin post navigation
+	include includes/single-post-pagination.pug
+	// End post navigation
+
+	// Begin Author Box
+	include includes/entry-author.pug
+	// End Author Box
+
+	// Begin related posts
+	include includes/related-posts.pug
+	// End related posts
+
+	// Begin Comments
+	include includes/comment-list.pug
+	// End comments
+
+	// Begin Comment Form
+	include includes/comment-form.pug
+	// End comment form

@@ -1,0 +1,685 @@
+/*-------------------------------------------------------*/
+/* 1: Table
+/* 2: Blockquote
+/* 3: Definition list
+/* 4: Unorder / Order list
+/* 5: Alignment
+/* 6: Pagination
+/* 7: Buttons
+/* 8: Comment area
+/* 9: Gallery
+/* 10: Breadcrumb
+/*-------------------------------------------------------*/
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+/* Accessibility */
+/* Text meant only for screen readers. */
+.screen-reader-text,
+.site-description {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+
+  &:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #0073aa;
+    display: block;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+  }
+}
+
+
+/* 1: Table
+-------------------------------- */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  line-height: 2;
+  margin-bottom: 40px;
+  width: 100%;
+  word-break: break-all;
+}
+table th {
+  font-weight: normal;
+  color: $heading-color;
+}
+
+table>thead>tr>th,
+table>tbody>tr>th,
+table>tfoot>tr>th,
+table>thead>tr>td,
+table>tbody>tr>td,
+table>tfoot>tr>td {
+  border-top: 1px solid $border-color;
+  padding: 8px;
+}
+
+table>thead>tr>th {
+  border-bottom: none;
+}
+
+table thead tr th {
+  font-size: 12px;
+  color: $heading-color;
+  font-family: $heading-font;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+table,
+table>thead>tr>th,
+table>tbody>tr>th,
+table>tfoot>tr>th,
+table>thead>tr>td,
+table>tbody>tr>td,
+table>tfoot>tr>td {
+  border-top: 1px solid $border-color;
+  margin-bottom: 30px;
+
+}
+tbody {
+  border-bottom: 1px solid $border-color;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+  background-color: $bg-light;
+}
+
+
+/* 2: Blockquote
+-------------------------------- */
+blockquote {
+  padding: 30px;
+  background-color: #f7f8f9;
+  margin-bottom: 30px;
+
+  p {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 5px !important;
+    position: relative;
+    font-family: $heading-font;
+    color: #444;
+  }
+
+  cite {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    color: #000;
+  }
+}
+
+
+/* 3: Definition list
+-------------------------------- */
+dl {
+  margin-bottom: 30px;
+
+  dt {
+    margin-bottom: 2px;
+    margin-top: 15px;
+    font-weight: normal;
+  }
+  dd {
+    margin-left: 40px;
+  }
+}
+
+/* 4: Unorder / Order list
+-------------------------------- */
+ol, ul {
+  margin: 0;
+  padding: 0;
+}
+
+.comment-content,
+.entry-content {
+  ol, ul {
+    margin-bottom: 30px;
+    margin-left: 40px;
+  }
+
+  ul li {
+    list-style-type: disc;
+  }
+
+  ol ol, ul ul {
+    margin-bottom: 0;
+  }
+}
+
+/* 5: Alignment
+-------------------------------- */
+
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  text-align: right;
+  margin-left: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.gallery-caption,
+.wp-caption-text {
+  text-align: center;
+  font-style: italic;
+  font-size: 13px;
+}
+
+embed,
+iframe,
+object,
+video,
+.wp-caption {
+  max-width: 100%;
+  display: block;
+  border: 0;
+}
+
+.author-box::after,
+.clearfix::after,
+.entry::after,
+.entry-content::after,
+.footer-widgets::after,
+.nav-primary::after,
+.nav-secondary::after,
+.pagination::after,
+.site-container::after,
+.site-footer::after,
+.site-header::after,
+.site-inner::after,
+.widget::after,
+.wrap::after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+.author-box::before,
+.clearfix::before,
+.entry::before,
+.entry-content::before,
+.footer-widgets::before,
+.nav-primary::before,
+.nav-secondary::before,
+.pagination::before,
+.site-container::before,
+.site-footer::before,
+.site-header::before,
+.site-inner::before,
+.widget::before,
+.wrap::before {
+  content: " ";
+  display: table;
+}
+
+.comment-content a {
+  word-wrap: break-word;
+}
+
+.bypostauthor {
+  display: block;
+}
+
+.sticky {
+  display: block;
+}
+
+.byline,
+.updated:not(.published){
+  display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+  display: inline;
+}
+
+
+
+/* 6: Pagination
+-------------------------------------------------------*/
+
+%pagination-item {
+  font-size: 15px;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 10px;
+  margin: 0 2px;
+  line-height: 32px;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid $border-color;
+  color: $heading-color;
+  vertical-align: middle;
+  background: #FFF;
+
+  @include transition(all .1s ease-in-out);
+}
+
+%pagination-item:not(span):hover {
+  background-color: $main-color;
+  border-color: transparent;
+  color: #fff;
+}
+
+%pagination-current {
+  background-color: #000;
+  color: #fff;
+  border-color: transparent;
+}
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+
+  a,
+  > span {
+    @extend %pagination-item;
+    margin-left: 5px;
+  }
+  > span {
+    @extend %pagination-current;
+  }
+}
+
+.pagination {
+  border-radius: 0;
+  @include display-flex;
+  justify-content: center;
+
+  a,
+  span {
+    @extend %pagination-item;
+  }
+
+  .current {
+    @extend %pagination-current;
+  }
+}
+
+.woocommerce nav.woocommerce-pagination {
+  ul {
+    border: 0;
+  }
+
+  ul li {
+
+    border-right: 0;
+    float: none;
+
+    a,
+    span,
+    a:focus,
+    a:hover {
+      @extend %pagination-item;
+    }
+
+    span.current {
+      @extend %pagination-current;
+    }
+  }
+}
+
+
+
+
+/* 7: Buttons
+-------------------------------------------------------*/
+
+%button {
+  font-family: $body-font;
+  padding: 10px 20px;
+  overflow: hidden;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: $main-color;
+  border: 1px solid $border-color;
+  border-radius: 30px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  @include transition(all .2s ease-in-out);
+
+  &:hover {
+    color: #fff;
+    background-color: $main-color;
+    border-color: transparent;
+  }
+
+  &:focus {
+    outline: none;
+    color: #fff;
+  }
+}
+
+.btn,
+button,
+.more-link,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  @extend %button;
+}
+
+.btn-lg {
+  font-size: 16px;
+  padding: 0 30px;
+  line-height: 54px;
+
+  span {
+    line-height: 52px;
+  }
+
+  i {
+    font-size: 16px;
+    margin-right: 4px;
+  }
+}
+
+.btn-md {
+  font-size: 13px;
+  padding: 0 20px;
+  line-height: 45px;
+
+  span {
+    line-height: 43px;
+  }
+}
+
+.btn-sm {
+  font-size: 11px;
+  padding: 0 20px;
+  line-height: 28px;
+}
+
+.btn-color {
+  background-color: $main-color;
+
+  &:hover {
+    background-color: #000 !important;
+  }
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.btn-stroke {
+  color: $heading-color;
+  border: 1px solid $border-color;
+  background-color: transparent;
+}
+
+.btn-dark {
+  background-color: $heading-color;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: $heading-color;
+}
+
+.btn-light {
+  background-color: $bg-light;
+  color: $heading-color;
+}
+
+.btn-white:focus,
+.btn-stroke:focus,
+.btn-transparent:focus {
+  color: $heading-color;
+}
+
+.rounded,
+.rounded:before {
+  border-radius: 70px;
+}
+
+/* 8: Comment area
+-------------------------------------------------------*/
+
+.comments-area {
+  h3 {
+    font-size: 24px;
+  }
+}
+
+.comment {
+  .avatar {
+    margin: 0 15px 20px 0;
+    border-radius: 50%;
+    float: left;
+  }
+}
+
+.comment-header {
+  margin-bottom: 15px;
+}
+
+.comment-list {
+  list-style: none;
+
+  .children li.comment {
+    padding-left: 30px;
+  }
+
+  .bypostauthor {
+
+  }
+}
+
+.comment-list,
+.comment-list .children {
+  list-style: none;
+}
+
+.comment-body {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $border-color;
+}
+
+.comment-author-link {
+  color: $heading-color;
+  font-family: $heading-font;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.comment-meta,
+.comment-time-link {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: $meta-color;
+}
+
+.comment-edit-link {
+  margin-left: 5px;
+  margin-bottom: 0;
+  color: $main-color;
+}
+
+.comment-reply {
+  color: #000;
+
+  &:hover {
+    color: $main-color;
+  }
+}
+
+.comment-form {
+  p {
+    margin: 0;
+  }
+
+  .form-submit {
+    margin-top: 20px;
+  }
+
+}
+
+.comment-respond {
+  margin-top: 40px;
+}
+
+
+
+/* 9: Gallery
+-------------------------------------------------------*/
+.gallery {
+  margin-bottom: 1.5em;
+}
+
+.gallery-item {
+  width: 100%;
+  display: inline-block;
+  padding: 0 3px;
+  text-align: center;
+  vertical-align: top;
+  margin-bottom: 10px;
+  position: relative;
+
+  .gallery-caption {
+    display: none;
+  }
+
+  .gallery-columns-2 & {
+    max-width: 50%;
+  }
+
+  .gallery-columns-3 & {
+    max-width: 33.33%;
+  }
+
+  .gallery-columns-4 & {
+    max-width: 25%;
+  }
+
+  .gallery-columns-5 & {
+    max-width: 20%;
+  }
+
+  .gallery-columns-6 & {
+    max-width: 16.66%;
+  }
+
+  .gallery-columns-7 & {
+    max-width: 14.28%;
+  }
+
+  .gallery-columns-8 & {
+    max-width: 12.5%;
+  }
+
+  .gallery-columns-9 & {
+    max-width: 11.11%;
+  }
+}
+
+
+/* 10: Breadcrumb
+/*-------------------------------------------------------*/
+
+// Woocommerce
+
+.woocommerce .woocommerce-breadcrumb {
+
+  a {
+    color: $main-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .delimiter {
+    padding: 0 3px;
+  }
+}
+
+
+
+
+
+
+
+/* Infinite scroll */
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+  display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+  display: block;
+}
+
+
+
+// Private Post
+.entry-content {
+  .post-password-form {
+    label,
+    input[type='password']{
+      margin-bottom: 0;
+    }
+    input[type='submit']{
+      padding: 9px 15px;
+      vertical-align: bottom;
+    }
+  }
+}
+

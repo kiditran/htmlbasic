@@ -1,0 +1,41 @@
+/* Navigation Bar
+----------------------------------- */
+.navbar {
+	margin-bottom: 0;
+}
+
+
+
+/* Logo
+----------------------------------- */
+.minwp-logo {
+	.site-title {
+		margin-bottom: 0;
+		text-align: center;
+		padding: 20px 0;
+	}
+	.img-logo {
+		width: 350px;
+		height: auto;
+		display: inline-block;
+	}
+}
+
+.navbar-1 {
+	.minwp-logo .site-title {
+		float: left;
+		width: 150px;
+		padding: 0;
+		margin-right: 20px;
+	}
+}
+.navbar-1.navbar-transparent {
+	position: fixed;
+	background: rgba(255,255,255,.2);
+	color: #FFF;
+	z-index: 99;
+	right: 0;
+	left: 0;
+	width: 100%;
+	border: 0;
+}

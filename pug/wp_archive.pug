@@ -1,0 +1,18 @@
+extend includes/layout.pug
+
+block site-main
+	header.page-header
+		h1.page-title Category Archives: Uncategorized
+	.minwp-post-list
+		include includes/post-formats/standard.pug
+		include includes/post-formats/gallery.pug
+		include includes/post-formats/video.pug
+		include includes/post-formats/audio.pug
+		include includes/post-formats/quote.pug
+		include includes/post-formats/aside.pug
+		include includes/post-formats/link.pug
+	// Begin Pagination
+	include includes/post-list-pagination-number.pug
+	// End Pagination
+
+

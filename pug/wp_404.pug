@@ -1,0 +1,19 @@
+extend includes/layout.pug
+
+block site-main
+	section.error-404.not-found
+		// Begin .page-header
+		header.page-header
+			h1.page-title Oops! That page can’t be found.
+		// End .page-header
+
+		// Begin .page-content
+		.page-content
+			p It looks like nothing was found at this location. Maybe try a search?
+			form.search-form(role='search', method='get', action='http://zenna.local/')
+				label
+					span.screen-reader-text Search for:
+					input.search-field(type='search', placeholder='Search …', value='', name='s')
+				button.search-submit(type='submit')
+					span.screen-reader-text Search
+		// End .page-content

@@ -1,0 +1,24 @@
+doctype html
+html(lang='en')
+  include head.pug
+  body.minwp
+    .site-container
+      // Begin Header
+      include header.pug
+      // End Header
+      // Begin .site-content
+      #content.site-content
+        .minwp-blog-template.minwp-sidebar-left
+          block featured-post-slider
+          block featured-post-grid
+          .container
+            .row
+              // Begin .site-main
+              #primary.content-area.col-md-12
+                main#main.site-main
+                  block site-main
+              // End .site-main
+      // End .site-content
+      // Begin .site-footer
+      include footer.pug
+      // End .site-footer
