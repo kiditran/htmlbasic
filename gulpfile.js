@@ -1,9 +1,9 @@
 'use strict'
 
-var gulp 		= require('gulp'),
-	sass 		= require('gulp-sass'),
-	sourcemaps	= require('gulp-sourcemaps'),
-	pug 		= require('gulp-pug');
+const gulp 		= require('gulp');
+const sass 		= require('gulp-sass');
+const sourcemaps	= require('gulp-sourcemaps');
+const pug 		= require('gulp-pug');
 
 
 // gulp.task ('hello', function(){
@@ -12,32 +12,35 @@ var gulp 		= require('gulp'),
 
 // Render SCSS by Gulp-Sass
 gulp.task('render_css', function(){
-	return gulp.src('./css/sass/**/*.scss')
-		.pipe(sourcemaps.init())
-		.pipe(sass({
-			style: 'expanded',
-			includePaths: ['./css/sass'],
-			errLogToConsle: true
+	return gulp.src('./src/sass/**/*.scss')
+	.pipe(sourcemaps.init())
+	.pipe(sass({
+		outputStyle: 'expanded'
 		}).on('error', sass.logError))// Coverts Sass to CSS with gulp-sass
-		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('./css'))
+	.pipe(sourcemaps.write('./'))
+	.pipe(gulp.dest('./dist/css'))
 })
 
 // Render HTML by Gulp-Pug
 gulp.task('render_html', function buildHTML() {
-	return gulp.src('pug/*.pug')
+	return gulp.src('src/pug/*.pug')
 	.pipe(pug({
 		doctype: 'html',
 		pretty: true
 	}))
-	.pipe(gulp.dest('./'))
+	.pipe(gulp.dest('./dist/'))
+});
+
+gulp.task('watch', () => {
+	gulp.watch('src/sass/**/*.scss',gulp.series(['render_css']));
+	gulp.watch('src/pug/**/*.pug',gulp.series(['render_html']));
 });
 
 
-gulp.task('default', function(){
-	gulp.watch('css/sass/**/*.scss',['render_css']);
-	gulp.watch(['pug/**/*.pug','includes/**/*pug'],['render_html']);
-});
+// Watch task
+gulp.task('default', gulp.series('render_css','render_html','watch'));
+
+
 
 /*
 https://github.com/dlmanning/gulp-sass/wiki/Update-to-the-latest-Gulp-Sass
